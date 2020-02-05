@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/all.css">
+  <title>Boca Cake</title>
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <!-- header section -->
+  <header class="header" id="header">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg px-5">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">
+          <img src="img/logo.svg" alt="boca cake logo" class="logo">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
+          <span class="toggler-icon">
+            <i class="fas fa-bars"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav text-capitalize mx-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Pocetna</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">O nama</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Prodavnica</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Usluge</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Porudzbina</a>
+            </li>
+          </ul>
+          <div class="nav-info-items d-none d-lg-flex">
+            <!-- single info  -->
+            <div class="nav-info align-self-center d-flex justify-content-between mx-lg-5">
+              <span class="info-icon mx-lg-3">
+                <i class="fas fa-phone"></i>
+              </span>
+              <p class="mb-0 phone">+381 65 6565 7890</p>
+            </div>
+
+            <div class="nav-info align-items-center cart-info d-flex justify-content-around mx-lg-5" id="cart-info">
+              <span class="cart-info__icon mr-lg-3">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+              <p class="mb-0 text-capitalize">
+                <span id="item-count">0</span>
+                <span>Ukupno - RSD</span>
+                <span class="item-total">
+                  0
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav><!-- end navigation bar -->
+
+    <!-- banner section  -->
+    <div class="container-fluid">
+      <div class="row max-height justify-content-center align-items-center">
+        <div class="col-10 mx-auto banner text-center">
+          <h1 class="text-capitalize">
+            Dobrodosli kod <strong class="banner-title">Boce kolaca...</strong>
+          </h1>
+          <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut nisi officia quibusdam
+            in incidunt ea,
+            consequatur commodi repudiandae qui magnam!</p>
+          <a href="#" class="btn banner-link text-uppercase my-5">Pogledaj jos...</a>
+        </div>
+        <!-- cart section  -->
+        <div class="cart" id="cart">
+          <!-- cart items hardcoded -->
+          <!--           
+          <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+            <img src="/img-cart/cake-2.jpeg" alt="cart item" class="img-fluid rounded-circle" id="item-img">
+            <div class="item-text">
+              <p id="cart-item-title" class="font-weight-bold mb-0">
+                kolac
+              </p>
+              <span>RSD</span>
+              <span id="cart-item-price" class="cart-item-price mb-0">105.99</span>
+            </div>
+            <a href="#" id="cart-item-remove" class="cart-item-remove">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+          
+          <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+            <img src="/img-cart/cupcake-1.jpeg" alt="cart item" class="img-fluid rounded-circle" id="item-img">
+            <div class="item-text">
+              <p id="cart-item-title" class="font-weight-bold mb-0">
+                kolac
+              </p>
+              <span>RSD</span>
+              <span id="cart-item-price" class="cart-item-price mb-0">105.99</span>
+            </div>
+            <a href="#" id="cart-item-remove" class="cart-item-remove">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div> -->
+          <!-- end cart items hardcoded -->
+
+          <!-- total  -->
+          <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+            <h5>ukupno:</h5>
+            <h5>RSD <strong id="cart-total" class="font-weight-bold">0</strong></h5>
+          </div><!-- end total  -->
+          <!-- cart buttons  -->
+          <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+            <a href="#" id="clear-cart" class="btn btn-pink text-uppercase">obrisi korpu</a>
+            <a href="#" id="clear-cart" class="btn btn-pink text-uppercase">kupi</a>
+          </div><!-- end cart buttons  -->
+        </div>
+        <!-- end cart section  -->
+      </div>
+    </div>
+    <!-- end banner section  -->
+  </header><!-- end header section -->
+
+  <!-- about section -->
+  <section class="about py-5" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 mx-auto col-md-6 my-5 align-self-center">
+          <h1 class="text-capitalize">malo <strong class="banner-title">o nama</strong></h1>
+          <p class="my-4 w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim
+            dignissimos repellat earum! Sapiente repellendus sint reiciendis? Culpa consequatur velit saepe praesentium,
+            a accusantium, tenetur aperiam iste voluptates accusamus maxime, fugiat iure nesciunt labore vero!
+          </p>
+          <a href="#" class="btn btn-pink text-uppercase">vise</a>
+        </div>
+        <div class="col-10 mx-auto col-md-6 my-5 align-self-center">
+          <div class="about-img__container">
+            <img src="img/sweets-1.jpeg" alt="sweet image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- end about section -->
+
+  <!-- store section  -->
+  <section id="store" class="store py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 mx-auto col-sm-6 text-center">
+          <h1 class="text-capitalize">u <strong class="banner-title">ponudi</strong></h1>
+        </div>
+      </div>
+
+      <!-- filter buttons -->
+      <div class="row">
+        <div class="col-lg-8 mx-auto d-flex justify-content-around sortBtn flex-wrap">
+          <a href="#" class="btn btn-pink text-uppercase filter-btn m-2" data-filter="all">sve</a>
+          <a href="#" class="btn btn-pink text-uppercase filter-btn m-2" data-filter="cupcakes">kolaci</a>
+          <a href="#" class="btn btn-pink text-uppercase filter-btn m-2" data-filter="cake">torte</a>
+          <a href="#" class="btn btn-pink text-uppercase filter-btn m-2" data-filter="sweets">poslastice</a>
+          <a href="#" class="btn btn-pink text-uppercase filter-btn m-2" data-filter="doughnuts">krofne</a>
+        </div>
+      </div><!-- end filter buttons -->
+
+      <!-- search box -->
+      <div class="row my-3">
+        <div class="col-10 mx-auto col-md-6">
+          <form>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text search-box" id="search-icon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="search-item" placeholder="trazi...">
+            </div>
+          </form>
+        </div>
+      </div><!-- end search box -->
+
+      <div class="row store-items" id="store-items">
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/sweets-1.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">slatkis</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">50</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/cupcake-1.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">kolac</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">50</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/cake-1.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">torta</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">50</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/doughnut-1.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">krofna</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">50</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/sweets-2.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">slatkis</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">100</strong>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/cupcake-2.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">kolac</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">100</strong>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/cake-2.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">torta</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">100</strong>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/doughnut-2.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">krofna</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">100</strong>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/sweets-3.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">slatkis</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">150</strong>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/cupcake-3.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">kolac</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">150</strong>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/cake-3.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">torta</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">150</strong>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/doughnut-3.jpeg" alt="sweets" class="card-img-top store-img">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 class="store-item-name">krofna</h5>
+                <h5 class="store-item-value">RSD <strong id="store-item-price" class="font-weight-bold">150</strong>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- end store section  -->
+
+  <!-- services section  -->
+  <section id="services" class="services py-5">
+    <div class="container">
+      <div class="row">
+        <!-- single service  -->
+        <div class="col-md-4 text-center my-3">
+          <img src="img/pie-icon.png" alt="bread icon" class="service-icon">
+          <h6 class="text-uppercase my-3 service-title">pecivo</h6>
+          <p class="w-75 mx-auto text-left service-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad debitis nulla provident tenetur distinctio nam?
+          </p>
+        </div>
+        <!-- end single service  -->
+        <!-- single service  -->
+        <div class="col-md-4 text-center my-3">
+          <img src="img/cake-icon.png" alt="bread icon" class="service-icon">
+          <h6 class="text-uppercase my-3 service-title">kolaci</h6>
+          <p class="w-75 mx-auto text-left service-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad debitis nulla provident tenetur distinctio nam?
+          </p>
+        </div>
+        <!-- end single service  -->
+        <!-- single service  -->
+        <div class="col-md-4 text-center my-3">
+          <img src="img/chocolate-box-icon.png" alt="bread icon" class="service-icon">
+          <h6 class="text-uppercase my-3 service-title">slatkisi</h6>
+          <p class="w-75 mx-auto text-left service-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad debitis nulla provident tenetur distinctio nam?
+          </p>
+        </div>
+        <!-- end single service  -->
+      </div>
+    </div>
+  </section><!-- end services section  -->
+
+  <!-- cakes section -->
+  <section id="cakes" class="cakes py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 mx-auto col-sm-6 text-center">
+          <h1 class="text-capitalize">porucite <strong class="banner-title">slatkise</strong></h1>
+        </div>
+      </div>
+      <div class="row">
+        <!-- single cake  -->
+        <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+          <h3 class="py-3">rodjendanska torta</h3>
+          <div class="text-muted">
+            <p class="my-3">torta sa imenom</p>
+            <p class="my-3">poseban recept</p>
+            <p class="my-3">razlicite velicine</p>
+            <p class="my-3">razlicit dizajn</p>
+            <button type="button" class="btn btn-pink text-capitalize my-3">poruci</button>
+            <p class="text-lowercase mb-4">Vec od 500 din.</p>
+            <img src="img/trans-cake.png" alt="" class="img-fluid">
+          </div>
+        </div>
+        <!-- end single cake  -->
+        <!-- single cake  -->
+        <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+          <h3 class="py-3">torta po vasem receptu</h3>
+          <div class="text-muted">
+            <p class="my-3">torta sa imenom</p>
+            <p class="my-3">poseban recept</p>
+            <p class="my-3">razlicite velicine</p>
+            <p class="my-3">razlicit dizajn</p>
+            <button type="button" class="btn btn-pink text-capitalize my-3">poruci</button>
+            <p class="text-lowercase mb-4">Vec od 800 din.</p>
+            <img src="img/trans-custom.png" alt="" class="img-fluid">
+          </div>
+        </div>
+        <!-- end single cake  -->
+        <!-- single cake  -->
+        <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+          <h3 class="py-3">torte za vencanja</h3>
+          <div class="text-muted">
+            <p class="my-3">torta sa imenom</p>
+            <p class="my-3">poseban recept</p>
+            <p class="my-3">razlicite velicine</p>
+            <p class="my-3">razlicit dizajn</p>
+            <button type="button" class="btn btn-pink text-capitalize my-3">poruci</button>
+            <p class="text-lowercase mb-4">Vec od 1200 din.</p>
+            <img src="img/trans-wedding.png" alt="" class="img-fluid">
+          </div>
+        </div>
+        <!-- end single cake  -->
+      </div>
+    </div>
+  </section><!-- end cakes section -->
+
+  <!-- FOOTER -->
+  <footer class="px-5" id="main-footer">
+    <div class="container">
+      <div class="row text-light py-4">
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">Boca Cake</h5>
+          <p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eveniet, harum
+            corrupti
+            libero voluptatum dolor. Velit in, odit fuga saepe neque enim aliquam excepturi minus.</p>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Korisni linkovi</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link text-white">Pocetna</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-white">O nama</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-white">Kontakt</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-white">Reklamacije</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-white">Uslovi koriscenja</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Imate pitanje?</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link text-capitalize text-white">Briga o kupcima</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-capitalize text-white">Tehnicka podrska</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-capitalize text-white">Reklamacije</a>
+            </li>
+            <li class="mt-3">
+              <a href="#" class="text-info">bocacake@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">Mejling lista</h5>
+          <p class="small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta eveniet hic odio
+            beatae quo, consequatur voluptate. Neque fugit repellendus nulla cum maxime et dignissimos aut!
+          </p>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Email adresa">
+              <div class="input-group-append">
+                <button class="btn btn-footer text-white text-uppercase font-weight-bold">
+                  Prijavi se
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center text-light border-top pt-3">
+          <p>&copy; <span id="year"></span> Copyright, Sva prava zadrzana | BocaCake</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- jquery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- script js -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
